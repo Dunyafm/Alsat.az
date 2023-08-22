@@ -762,43 +762,17 @@ $(document).ready(function() {
 });
 
 function validateForm() {
-  var name = document.forms["myForm"]["fname"].value;
-  var username = document.forms["myForm"]["fusername"].value;
-  var email = document.forms["myForm"]["femail"].value;
-  var phone = document.forms["myForm"]["fphone"].value;
-  var price = document.forms["myForm"]["fprice"].value;
-  
-  if (name === "" || name === null) {
-    alert("Name must be filled out");
-    return false;
+  var imageinput = document.getElementById("imageInput").value;
+  var name = document.getElementById("name").value;
+  var price = document.getElementById("price").value;
+  var information = document.getElementById("information").value;
+  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+
+  if (!imageinput || !name || !price || !information || !username || !email || !phone) {
+      alert("Sən formu tam doldurmalısan");
+      return false; // Prevent form submission
   }
-  
-  if (price === "" || price === null) {
-    alert("Price must be filled out");
-    return false;
-  }
-  
-  if (email === "" || email === null) {
-    alert("Email must be filled out");
-    return false;
-  } else {
-    // Regular expression for basic email validation
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email.match(emailPattern)) {
-        alert("Invalid email format");
-        return false;
-    }
-}
-  
-  if (username === "" || username === null) {
-    alert("Username must be filled out");
-    return false;
-  }
-  
-  if (phone === "" || phone === null) {
-    alert("Phone must be filled out");
-    return false;
-  }
-  
-  return true;
+  return true; // Allow form submission
 }
