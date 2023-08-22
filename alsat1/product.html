@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        /* Ваши стили */
+    </style>
+</head>
+<body>
+    <div class="product-details">
+        <div class="product-image">
+            <!-- Ваше изображение товара будет здесь -->
+        </div>
+        <h2 class="product-title">Product Title</h2>
+        <p class="product-description">Product Description</p>
+        <span class="product-price">$99.99</span>
+    </div>
+
+    <script>
+        // Получаем параметр 'product' из URL
+        const params = new URLSearchParams(window.location.search);
+        const productName = params.get('product');
+
+        // Загружаем данные для конкретного продукта на основе 'productName'
+        // Это может быть объект с данными, например, из JSON или статический набор данных
+
+        // Пример: загрузка данных и фотографий на основе productName
+        const productData = getProductData(productName);
+
+        // Обновляем элементы на странице с данными конкретного продукта
+        const productImageElement = document.querySelector('.product-image');
+        const productTitleElement = document.querySelector('.product-title');
+        const productDescriptionElement = document.querySelector('.product-description');
+        const productPriceElement = document.querySelector('.product-price');
+
+        // Устанавливаем данные и фотографии на странице
+        productImageElement.style.backgroundImage = `url(${productData.image})`;
+        productTitleElement.textContent = productData.title;
+        productDescriptionElement.textContent = productData.description;
+        productPriceElement.textContent = productData.price;
+    </script>
+</body>
+</html>

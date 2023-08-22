@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./assets/img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>AlSat Mağazası</title>
+
+    <!--
+            CSS
+            ============================================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/linearicons.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/css/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/nouislider.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <style>
+        /* Применение минимальной стилизации к iframe */
+        iframe {
+            display: block;
+            margin: auto;
+            width: 80%; /* Вы можете настроить ширину карты по своему усмотрению */
+            height: 450px;
+            border: none;
+        }
+        .map-container {
+            margin-top: 80px; /* Измените это значение для создания достаточного пространства под навигационной панелью */
+            text-align: center;
+        }
+    </style>
+
+<style>
+    /* Стилизация ссылки внутри кнопки */
+    .button a {
+        color: #fff; /* Здесь укажите желаемый цвет текста */
+        text-decoration: none; /* Убираем подчеркивание ссылки, если не нужно */
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Start Header Area -->
+    <header class="header_area sticky-header">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light main_box">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <h1><a href="./contacts.html"><span style="color: black;">Al</span><span style="color: #ff6c00;">Sat</span></a></h1>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="./index.html">Əsas Səhifə</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Mağaza</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="category.html">Kateqorialar</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="single-product.html">Təfərrüatlar</a></li>
+                                   
+                                </ul>
+                            </li>
+                          
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Səhifələr</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                   
+                                </ul>
+                            </li>
+                            <li class="nav-item active"><a class="nav-link" href="contact.html">Əlaqə</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+                            <li class="nav-item">
+                                <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container">
+                <form class="d-flex justify-content-between">
+                    <input type="text" class="form-control" id="search_input" placeholder="Axtar">
+                    <button type="submit" class="btn"></button>
+                    <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <div class="col-first">
+                    <h1>Contact Us</h1>
+                    <nav class="d-flex align-items-center">
+                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="category.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+    
+    <div class="map_container">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194473.18588939894!2d49.8549596!3d40.394592499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2z0JHQsNC60YM!5e0!3m2!1sru!2saz!4v1691940951571!5m2!1sru!2saz"
+        width="600" height="450" style="border:0; margin-top: 80px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+   
+
+    <!--================Contact Area =================-->
+    <section class="contact_area section_gap_bottom">
+        <div class="container">
+            <div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13"
+                data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia." data-mlat="40.701083"
+                data-mlon="-74.1522848">
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>Bakı, Azərbaycan</h6>
+                            <p>Mehdi Mehdizadə küç.35</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6><a href="#">012 310 24 24</a></h6>
+                            <p>24 saat işləyirik</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <h6><a href="#">Alsat@gmail.com</a></h6>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm"
+                        novalidate="novalidate">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Ad, Soyad" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter your name'">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="E-mail Ünvanını Daxil Edin" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter email address'">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    placeholder="Mövzunu Daxil Edin" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter Subject'">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"
+                                    placeholder="Mesaj Daxil Edin" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter Message'"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" value="submit" class="primary-btn">Mesaj Göndər</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Contact Area =================-->
+
+     <!------COOKIES----->
+     <body>
+        <div class="wrapper">
+          <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies Consent</h2>
+          </header>
+          <div class="data">
+            <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. <a href="#"> Read more...</a>
+            
+            </p>
+          </div>
+          <div class="buttons">
+            <button class="button" id="acceptBtn"><a href="./cookies.html">Accept</a></button>
+            <button class="button" id="declineBtn">Decline</button>
+          </div>
+        </div>
+      </body>
+    <!------COOKIES END----->
+
+    <!----FOOTER----->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <ul class="footer-list">
+                <li>
+                    <h3>İnformasiya</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Konfidensiallıq siyasəti</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Geri qaytarma siyasəti</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Hissə-hissə ödəniş şərtləri</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Müştərilər</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Saytın istifadə şərtləri</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Şikayətlərin idarəolunma siyasəti</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Zəmanətlər</a>
+                </li>
+            </ul>
+
+
+
+
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Əlaqə</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">012 310 24 24</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Karyera</a>
+                </li>
+            </ul>
+
+
+        </div>
+        </div>
+
+
+        <div id="footer_copyright">
+            &#169
+            2023 AlSat
+        </div>
+    </footer>
+    <!-- End footer Area -->
+
+    <!-- End footer Area -->
+
+    <!--================Contact Success and Error message Area =================-->
+    <div id="success" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Thank you</h2>
+                    <p>Your message is successfully sent...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals error -->
+
+    <div id="error" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Sorry !</h2>
+                    <p> Something went wrong </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================End Contact Success and Error message Area =================-->
+
+
+    <script src="./assets/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="./assets/vendor/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/nouislider.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!--gmaps Js-->
+   
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
